@@ -38,3 +38,7 @@ Dependencies all in the lotSpot-env folder should not need to install anything e
  pip install supervision
  pip install opencv-python
  pip install inference
+
+
+
+ https://universe.roboflow.com/ai-training-mevw9/parking-detection-mitok/model/2?image=https%3A%2F%2Fsource.roboflow.com%2FVBemh0IU2sO31snqHxOklbNyr7X2%2FdzANtLFs6vdO1crtc4lQ%2Foriginal.jpg
