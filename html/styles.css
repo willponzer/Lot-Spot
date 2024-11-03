@@ -13,8 +13,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 100px;
     /* Offset for the fixed header */
+    padding-bottom: 50px;
+    min-height: 100vh;
 }
 
 /* Fixed Header */
@@ -24,10 +26,13 @@ body {
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2.5rem;
+    /* Increased padding */
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #C8102E;
+    /* Red bottom border */
     z-index: 1000;
     /* Ensures header stays above other content */
 }
@@ -35,18 +40,21 @@ body {
 .title {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    /* Increased spacing between logo and title */
 }
 
 .title h1 {
     color: #C8102E;
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    /* Slightly larger font size */
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    /* Slightly larger logo */
+    height: 60px;
 }
 
 /* Selection Containers */
@@ -54,31 +62,38 @@ body {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    max-width: 600px;
-    margin-top: 2rem;
+    max-width: 800px;
+    margin-top: 3rem;
+    /* Increased top margin */
+    gap: 2rem;
+    /* Increased gap between dropdown containers */
 }
 
 .dropdown-container {
     flex: 1;
-    padding: 1rem;
+    padding: 1.5rem;
+    /* Increased padding */
     background-color: #ffffff;
     border: 2px solid #C8102E;
     /* Red border */
-    border-radius: 5px;
-    margin: 0 0.5rem;
+    border-radius: 8px;
+    /* Slightly larger border radius */
 }
 
 .dropdown-container label {
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    /* Slightly larger font size */
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .dropdown-container select {
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 0.75rem;
+    /* Increased padding */
+    font-size: 1.1rem;
+    /* Slightly larger font size */
     font-weight: 600;
     color: #333;
     background-color: #f1f1f1;
@@ -95,19 +110,22 @@ body {
 /* Availability Display */
 .availability {
     width: 90%;
-    max-width: 600px;
-    padding: 1.5rem;
+    max-width: 800px;
+    padding: 2rem;
+    /* Increased padding */
     background-color: #ffffff;
     /* White background */
     border: 2px solid #C8102E;
     /* Red border */
     border-radius: 8px;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    /* Increased top margin */
 }
 
 .availability p {
     color: #C8102E;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    /* Larger font size */
     font-weight: 800;
 }
