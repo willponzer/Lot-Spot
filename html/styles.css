@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    /* Off-white */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    /* Offset for the fixed header */
+}
+
+/* Fixed Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Ensures header stays above other content */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.title h1 {
+    color: #C8102E;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Selection Containers */
+.selection-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.dropdown-container {
+    flex: 1;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #C8102E;
+    /* Red border */
+    border-radius: 5px;
+    margin: 0 0.5rem;
+}
+
+.dropdown-container label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-container select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.dropdown-container select:focus {
+    outline: none;
+    border-color: #C8102E;
+}
+
+/* Availability Display */
+.availability {
+    width: 90%;
+    max-width: 600px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    /* White background */
+    border: 2px solid #C8102E;
+    /* Red border */
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.availability p {
+    color: #C8102E;
+    font-size: 2rem;
+    font-weight: 800;
+}

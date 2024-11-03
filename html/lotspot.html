@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LotSpot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Fixed Header with Logo and Title -->
+    <header class="header">
+        <div class="title">
+            <img src="logo.png" alt="LotSpot Logo" class="logo">
+            <h1>LotSpot</h1>
+        </div>
+    </header>
+
+    <!-- User Type and Parking Lot Selection -->
+    <div class="selection-container">
+        <div class="dropdown-container">
+            <label for="userType">User Type:</label>
+            <select id="userType">
+                <option value="">Choose a type</option>
+                <option value="resident">Resident</option>
+                <option value="commuter">Commuter</option>
+                <option value="visitor">Visitor</option>
+                <option value="staff">Staff</option>
+                <option value="security">Security</option>
+            </select>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="parkingLot">Parking Lot:</label>
+            <select id="parkingLot">
+                <option value="">Choose a lot</option>
+                <option value="lotA">Lot A</option>
+                <option value="lotB">Lot B</option>
+                <option value="lotC">Lot C</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Availability Display -->
+    <div class="availability" id="availability">
+        <p id="availableSpots">Select options above to view available spots.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
