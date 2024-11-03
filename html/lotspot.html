@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LotSpot</title>
+
+    <!-- Link to Google Fonts for custom font style -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Fixed Header with Logo and Title -->
+    <!-- Fixed header containing logo and title -->
     <header class="header">
         <div class="title">
-            <img src="logo.png" alt="LotSpot Logo" class="logo">
-            <h1>LotSpot</h1>
+            <img src="logo.png" alt="LotSpot Logo" class="logo"> <!-- Placeholder for logo image -->
+            <h1>LotSpot</h1> <!-- Title text -->
         </div>
     </header>
 
-    <!-- User Type and Parking Lot Selection -->
+    <!-- Main container for user selection dropdowns -->
     <div class="selection-container">
+
+        <!-- Dropdown container for selecting user type -->
         <div class="dropdown-container">
-            <label for="userType">User Type:</label>
-            <select id="userType">
+            <label for="userType">User Type:</label> <!-- Label for user type dropdown -->
+            <select id="userType"> <!-- Dropdown menu for user type options -->
                 <option value="">Choose a type</option>
                 <option value="resident">Resident</option>
                 <option value="commuter">Commuter</option>
@@ -33,9 +39,10 @@
             </select>
         </div>
 
+        <!-- Dropdown container for selecting parking lot -->
         <div class="dropdown-container">
-            <label for="parkingLot">Parking Lot:</label>
-            <select id="parkingLot">
+            <label for="parkingLot">Parking Lot:</label> <!-- Label for parking lot dropdown -->
+            <select id="parkingLot"> <!-- Dropdown menu for parking lot options -->
                 <option value="">Choose a lot</option>
                 <option value="lotA">Lot A</option>
                 <option value="lotB">Lot B</option>
@@ -44,11 +51,12 @@
         </div>
     </div>
 
-    <!-- Availability Display -->
+    <!-- Container for displaying available parking spots -->
     <div class="availability" id="availability">
-        <p id="availableSpots">Select options above to view available spots.</p>
+        <p id="availableSpots">Select options above to view available spots.</p> <!-- Default message -->
     </div>
 
+    <!-- Link to external JavaScript file for interactive functionality -->
     <script src="scripts.js"></script>
 </body>
 
