@@ -24,6 +24,22 @@ result = CLIENT.infer(image_base64, model_id="parking-detection-mitok/2")
 
 print(json.dumps(result, indent=4))  # Pretty-print the JSON
 
+# Initialize counters for empty and occupied
+total_empty = 0
+total_occupied = 0
 
+
+# Iterate through the results and count the classes
+for detection in result['predictions']:
+    if detection['class'] == 'empty':
+        total_empty += 1
+    elif detection['class'] == 'occupied':
+        total_occupied += 1
+
+total_spots = total_empty + total_occupied
+# Print the totals
+print(f"Total empty: {total_empty}")
+print(f"Total occupied: {total_occupied}")
+print(f"Total spots: {total_spots}")
 
 
