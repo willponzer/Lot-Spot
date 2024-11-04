@@ -1,5 +1,6 @@
 import base64
 from inference_sdk import InferenceHTTPClient
+import json
 
 # Read the image file and encode it in base64
 def encode_image_to_base64(image_path):
@@ -18,4 +19,11 @@ image_base64 = encode_image_to_base64("roboflowDemo/parkingLot2.jpg")
 # Perform inference
 result = CLIENT.infer(image_base64, model_id="parking-detection-mitok/2")
 
-print(result)
+
+# Check if `result` is a dictionary (which is the typical structure for parsed JSON)
+
+print(json.dumps(result, indent=4))  # Pretty-print the JSON
+
+
+
+
