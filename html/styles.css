@@ -1,171 +1,112 @@
-/* Reset default margin, padding, and box-sizing for all elements */
+/* Reset margin, padding, and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Main body styling */
+/* Body styling */
 body {
     background-color: #f8f9fa;
-    /* Light off-white background */
     font-family: 'Poppins', sans-serif;
-    /* Modern, clean font */
     color: #333;
-    /* Dark text color for readability */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-    /* Offset for fixed header */
     padding-bottom: 50px;
-    /* Space at the bottom */
     min-height: 100vh;
-    /* Ensures body fills at least the viewport height */
 }
 
-/* Fixed header styling */
+/* Header styling */
 .header {
     position: fixed;
-    /* Keeps header at the top during scroll */
     top: 0;
     left: 0;
     width: 100%;
-    /* Full width header */
     background-color: #ffffff;
-    /* White background for contrast */
     padding: 1.5rem 2.5rem;
-    /* Generous padding for visual spacing */
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     border-bottom: 2px solid #C8102E;
-    /* Red bottom border for emphasis */
     z-index: 1000;
-    /* Keeps header above other content */
 }
 
-/* Title container within the header */
+/* Title container */
 .title {
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* Space between logo and title text */
 }
 
-/* Styling for the title text */
 .title h1 {
     color: #C8102E;
-    /* Red color to match brand */
     font-weight: 800;
-    /* Extra bold for prominence */
     font-size: 2.2rem;
-    /* Larger font size */
 }
 
-/* Logo styling */
 .logo {
     width: 60px;
-    /* Size for consistency */
     height: 60px;
 }
 
-/* Container for dropdown sections */
+/* Selection container */
 .selection-container {
     display: flex;
     justify-content: space-between;
-    /* Positions dropdowns on left and right */
     width: 90%;
-    /* Responsive width */
     max-width: 800px;
-    /* Limits container width on large screens */
     margin-top: 3rem;
-    /* Space below the header */
     gap: 2rem;
-    /* Space between dropdown containers */
 }
 
-/* Individual dropdown container styling */
 .dropdown-container {
     flex: 1;
-    /* Allows containers to take equal width */
     padding: 1.5rem;
-    /* Padding inside each container */
     background-color: #ffffff;
-    /* White background */
     border: 2px solid #C8102E;
-    /* Red border for visual consistency */
     border-radius: 8px;
-    /* Rounded corners */
 }
 
-/* Label styling within dropdown containers */
 .dropdown-container label {
     display: block;
     font-size: 1.1rem;
-    /* Slightly larger font for readability */
     font-weight: 700;
-    /* Bold text for emphasis */
     margin-bottom: 0.5rem;
-    /* Space below label */
 }
 
-/* Dropdown select styling */
 .dropdown-container select {
     width: 100%;
-    /* Full width for consistency */
     padding: 0.75rem;
-    /* Padding for comfortable click area */
     font-size: 1.1rem;
-    /* Readable font size */
     font-weight: 600;
-    /* Semi-bold for better visibility */
     color: #333;
-    /* Dark text color */
     background-color: #f1f1f1;
-    /* Light background for contrast */
     border: 1px solid #ddd;
-    /* Subtle border */
     border-radius: 5px;
-    /* Rounded corners */
     transition: border-color 0.3s;
-    /* Smooth transition on focus */
 }
 
-/* Focused state for dropdown select */
 .dropdown-container select:focus {
     outline: none;
     border-color: #C8102E;
-    /* Red border on focus for visibility */
 }
 
-/* Availability display container */
+/* Availability display */
 .availability {
     width: 90%;
-    /* Responsive width */
     max-width: 800px;
-    /* Limit width on large screens */
     padding: 2rem;
-    /* Generous padding for readability */
     background-color: #ffffff;
-    /* White background */
     border: 2px solid #C8102E;
-    /* Red border to match design */
     border-radius: 8px;
-    /* Rounded corners */
     text-align: center;
-    /* Center text alignment */
     margin-top: 3rem;
-    /* Space above */
 }
 
-/* Text styling inside the availability display */
 .availability p {
     color: #C8102E;
-    /* Red color for emphasis */
     font-size: 2.5rem;
-    /* Large font size for prominence */
     font-weight: 800;
-    /* Extra bold for clarity */
 }
