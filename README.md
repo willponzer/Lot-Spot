@@ -1,7 +1,7 @@
 # Lot-Spot
 Fall 2024 Capping Project
 
-PYTHON VERSION 3.11.1 required or it will not run 
+PYTHON VERSION 3.11.1 required or packages cannot be imported and it will not run 
 
 
 ##### how to run the project ########

@@ -10,7 +10,7 @@ def encode_image_to_base64(image_path):
 
 # Define the image file to use for inference
 # image_file = "roboflowDemo/parkingLot2.jpg"
-image_file = "roboflowDemo/parkingLot.webp"
+image_file = "roboflowDemo/parkingLot2.jpg"
 
 # Encode the image to base64
 image_base64 = encode_image_to_base64(image_file)
