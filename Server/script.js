@@ -14,6 +14,7 @@ async function fetchParkingData() {
         if (!response.ok) throw new Error("Network response was not ok");
 
         const data = await response.json();
+        console.log("Parking data:", data);
         displayParkingData(data);
     } catch (error) {
         console.error("Failed to fetch parking data:", error);
