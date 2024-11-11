@@ -1,6 +1,7 @@
 import base64
 import cv2
 import json
+import requests
 from inference_sdk import InferenceHTTPClient
 
 # Function to encode image to base64
@@ -36,22 +37,19 @@ frame_interval = int(fps * interval)
 frame_count = 0
 
 while cap.isOpened():
-    sucess, frame = cap.read()
-    if not sucess:
+    success, frame = cap.read()
+    if not success:
         break
 
     if frame_count % frame_interval == 0:
         # Encode the frame to base64
         image_base64 = encode_frame_to_base64(frame)
 
-        # Perform inference
-        result = CLIENT.infer(image_base64, model_id="parking-detection-mitok/2")
+        # Run inference on the base64-encoded frame
+        results = CLIENT.infer(image_base64)[0]
 
         # Extract only the class values from the predictions
-        class_values = [detection['class'] for detection in result['predictions']]
-
-        # Pretty-print the class values
-        print(json.dumps(class_values, indent=4))
+        class_values = [detection['class'] for detection in results['predictions']]
 
         # Initialize counters for empty and occupied
         total_empty = 0
@@ -66,10 +64,17 @@ while cap.isOpened():
 
         total_spots = total_empty + total_occupied
 
-        # Print the totals
-        print(f"Total empty: {total_empty}")
-        print(f"Total occupied: {total_occupied}")
-        print(f"Total spots: {total_spots}")
+        # Prepare the data to send to the server
+        data = {
+            "total_empty": total_empty,
+            "total_occupied": total_occupied,
+            "total_spots": total_spots
+        }
+
+        # Send the data to the server
+        response = requests.post('http://localhost:3000/api/update-parking', json=data)
+        if response.status_code != 200:
+            print("Failed to send data to server")
 
     frame_count += 1
 
