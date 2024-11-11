@@ -1,0 +1,12 @@
+{
+  "name": "lot-spot",
+  "version": "1.0.0",
+  "description": "LotSpot",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node ./server/app.js",
+    "test": "/t"
+  },
+  "author": "",
+  "license": "MIT"
+}
