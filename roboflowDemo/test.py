@@ -36,8 +36,8 @@ frame_interval = int(fps * interval)
 frame_count = 0
 
 while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
+    sucess, frame = cap.read()
+    if not sucess:
         break
 
     if frame_count % frame_interval == 0:
