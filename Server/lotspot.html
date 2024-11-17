@@ -34,8 +34,7 @@
                 <option value="resident">Resident</option>
                 <option value="commuter">Commuter</option>
                 <option value="visitor">Visitor</option>
-                <option value="staff">Staff</option>
-                <option value="security">Security</option>
+                <option value="fs">Faculty/Staff</option>
             </select>
         </div>
 
@@ -44,9 +43,6 @@
             <label for="parkingLot">Parking Lot:</label> <!-- Label for parking lot dropdown -->
             <select id="parkingLot"> <!-- Dropdown menu for parking lot options -->
                 <option value="">Choose a lot</option>
-                <option value="lotA">Lot A</option>
-                <option value="lotB">Lot B</option>
-                <option value="lotC">Lot C</option>
             </select>
         </div>
     </div>
@@ -54,6 +50,11 @@
     <!-- Container for displaying available parking spots -->
     <div class="availability" id="availability">
         <p id="availableSpots">Select options above to view available spots.</p> <!-- Default message -->
+    </div>
+
+    <!-- Container for displaying parking map image -->
+    <div class="map-container" id="map-container">
+        <img src="maristparkingmap.png" alt="Marist Parking Map" class="map-image">
     </div>
 
     <!-- Link to external JavaScript file for interactive functionality -->

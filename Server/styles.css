@@ -93,6 +93,12 @@ body {
     border-color: #C8102E;
 }
 
+/* Hover effect for dropdowns */
+.dropdown-container select:hover {
+    border-color: #a3081e;
+    /* Darker red for hover effect */
+}
+
 /* Availability display */
 .availability {
     width: 90%;
@@ -109,4 +115,22 @@ body {
     color: #C8102E;
     font-size: 2.5rem;
     font-weight: 800;
+}
+
+/* Map container */
+.map-container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: #ffffff;
+    border: 2px solid #C8102E;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.map-container .map-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
