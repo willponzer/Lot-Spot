@@ -71,8 +71,6 @@ while cap.isOpened():
             "totalSpots": total_spots
         }
 
-        print(total_empty)
-
         #  uncomment if needed to send information to the server
         # Send the data to the server 
         response = requests.post('http://localhost:3000/api/update-parking', json=data)
