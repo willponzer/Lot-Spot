@@ -1,9 +1,17 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON data
 app.use(express.json());
+
+// Use static html file
+app.use(express.static(path.join(__dirname)));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'lotspot.html'))
+});
+
 
 // Variable to store latest parking data
 let parkingData = { availableSpots: 0 };
@@ -21,5 +29,5 @@ app.get('/api/parking-availability', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
