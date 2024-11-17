@@ -55,6 +55,7 @@ document.getElementById("userType").addEventListener("change", () => {
             parkingLotSelect.appendChild(option);
         });
     }
+    updateMessage();
 });
 
 // Function to fetch parking data
@@ -62,10 +63,9 @@ async function fetchParkingData() {
     const userType = document.getElementById("userType").value;
     const parkingLot = document.getElementById("parkingLot").value;
 
-    if (!userType || !parkingLot) {
-        document.getElementById("availableSpots").textContent = "Please select a Parking Lot!";
-        return;
-    }
+    updateMessage(); // Update message based on selections
+
+    if (!userType || !parkingLot) return; // Exit if selections are incomplete
 
     try {
         document.getElementById("availableSpots").textContent = "Loading...";
@@ -94,6 +94,18 @@ async function fetchParkingData() {
     } catch (error) {
         console.error("Failed to fetch parking data:", error);
         document.getElementById("availableSpots").textContent = "Error loading data";
+    }
+}
+
+// Update message based on user selections
+function updateMessage() {
+    const userType = document.getElementById("userType").value;
+    const parkingLot = document.getElementById("parkingLot").value;
+
+    if (!userType && !parkingLot) {
+        document.getElementById("availableSpots").textContent = "Select options above to view available spots!";
+    } else if (userType && !parkingLot) {
+        document.getElementById("availableSpots").textContent = "Please select a Parking Lot!";
     }
 }
 
