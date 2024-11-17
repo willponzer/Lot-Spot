@@ -66,16 +66,18 @@ while cap.isOpened():
 
         # Prepare the data to send to the server
         data = {
-            "total_empty": total_empty,
-            "total_occupied": total_occupied,
-            "total_spots": total_spots
+            "availableSpots": total_empty,
+            "occupiedSpots": total_occupied,
+            "totalSpots": total_spots
         }
 
+        print(total_empty)
+
         #  uncomment if needed to send information to the server
-        # # Send the data to the server 
-        # response = requests.post('http://localhost:3000/api/update-parking', json=data)
-        # if response.status_code != 200:
-        #     print("Failed to send data to server")
+        # Send the data to the server 
+        response = requests.post('http://localhost:3000/api/update-parking', json=data)
+        if response.status_code != 200:
+            print("Failed to send data to server")
 
     frame_count += 1
 
