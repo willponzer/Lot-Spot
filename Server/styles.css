@@ -44,6 +44,7 @@ body {
     color: #C8102E;
     font-weight: 800;
     font-size: 2.2rem;
+    text-align: center;
 }
 
 .logo {
@@ -54,6 +55,8 @@ body {
 /* Selection container */
 .selection-container {
     display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
     justify-content: space-between;
     width: 90%;
     max-width: 800px;
@@ -67,6 +70,8 @@ body {
     background-color: #ffffff;
     border: 2px solid #C8102E;
     border-radius: 8px;
+    min-width: 250px;
+    /* Ensure dropdowns don't shrink too much */
 }
 
 .dropdown-container label {
@@ -133,4 +138,63 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Adjust header for smaller screens */
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        gap: 0.5rem;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Adjust selection container for stacking */
+    .selection-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-container {
+        min-width: 100%;
+        /* Dropdowns span full width on mobile */
+    }
+
+    /* Adjust availability and map containers for better spacing */
+    .availability,
+    .map-container {
+        padding: 1.5rem;
+    }
+
+    .availability p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .availability p {
+        font-size: 1.8rem;
+    }
+
+    .map-container .map-image {
+        border-radius: 3px;
+    }
 }
