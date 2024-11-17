@@ -1,6 +1,7 @@
 import base64
 import cv2
 import json
+import requests
 from inference_sdk import InferenceHTTPClient
 
 # Function to encode image to base64
@@ -36,8 +37,8 @@ frame_interval = int(fps * interval)
 frame_count = 0
 
 while cap.isOpened():
-    sucess, frame = cap.read()
-    if not sucess:
+    success, frame = cap.read()
+    if not success:
         break
 
     if frame_count % frame_interval == 0:
@@ -49,9 +50,6 @@ while cap.isOpened():
 
         # Extract only the class values from the predictions
         class_values = [detection['class'] for detection in result['predictions']]
-
-        # Pretty-print the class values
-        print(json.dumps(class_values, indent=4))
 
         # Initialize counters for empty and occupied
         total_empty = 0
@@ -66,10 +64,18 @@ while cap.isOpened():
 
         total_spots = total_empty + total_occupied
 
-        # Print the totals
-        print(f"Total empty: {total_empty}")
-        print(f"Total occupied: {total_occupied}")
-        print(f"Total spots: {total_spots}")
+        # Prepare the data to send to the server
+        data = {
+            "total_empty": total_empty,
+            "total_occupied": total_occupied,
+            "total_spots": total_spots
+        }
+
+        #  uncomment if needed to send information to the server
+        # # Send the data to the server 
+        # response = requests.post('http://localhost:3000/api/update-parking', json=data)
+        # if response.status_code != 200:
+        #     print("Failed to send data to server")
 
     frame_count += 1
 
