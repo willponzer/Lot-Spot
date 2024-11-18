@@ -22,7 +22,7 @@ if not cap.isOpened():
     exit()
 
 # Set the interval (in seconds) to capture frames
-interval = 5
+interval = 1
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_interval = int(fps * interval)
 

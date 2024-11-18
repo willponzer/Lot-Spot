@@ -74,7 +74,6 @@ while cap.isOpened():
 
         #  uncomment if needed to send information to the server
         # Send the data to the server 
-         # Send the data to the server
         try:
             response = requests.post('http://localhost:3000/api/update-parking', json=data)
             response.raise_for_status()
