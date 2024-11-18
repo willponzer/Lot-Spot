@@ -109,6 +109,12 @@ function updateMessage() {
     }
 }
 
+// Periodically fetch parking data
+setInterval(fetchParkingData, 3000); // Fetch data every 1 seconds
+
+// Initial fetch to display data immediately
+//fetchParkingData();
+
 // Set event listeners on dropdowns to fetch data on change
 document.getElementById("userType").addEventListener("change", fetchParkingData);
 document.getElementById("parkingLot").addEventListener("change", fetchParkingData);

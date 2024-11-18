@@ -3,6 +3,7 @@ import cv2
 import json
 import requests
 from inference_sdk import InferenceHTTPClient
+import time 
 
 # Function to encode image to base64
 def encode_image_to_base64(image_path):
@@ -73,11 +74,16 @@ while cap.isOpened():
 
         #  uncomment if needed to send information to the server
         # Send the data to the server 
-        response = requests.post('http://localhost:3000/api/update-parking', json=data)
-        if response.status_code != 200:
-            print("Failed to send data to server")
+         # Send the data to the server
+        try:
+            response = requests.post('http://localhost:3000/api/update-parking', json=data)
+            response.raise_for_status()
+        except requests.exceptions.RequestException as e:
+            print(f"Failed to send data to server: {e}")
 
     frame_count += 1
+    #time.sleep(2) # Adjust the duration as needed
+
 
 cap.release()
 cv2.destroyAllWindows()
