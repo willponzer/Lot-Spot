@@ -13,7 +13,7 @@ def encode_frame_to_base64(frame):
 model = get_model(model_id="parking-detection-mitok/2", api_key="GFEjhf91EQyU1Gs4mPkQ")
 
 # Capture video from file
-video_path = "roboflowDemo/CarPark.mp4"
+video_path = r"C:\Users\Samst\OneDrive\Documents\GitHub\Lot-Spot\roboflowDemo\CarPark.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Check if video opened successfully
