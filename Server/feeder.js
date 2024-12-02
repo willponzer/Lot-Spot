@@ -4,7 +4,7 @@ const SftpClient = require('ssh2-sftp-client');
 
 // Configuration
 const config = {
-  host: '148.100.11.145',
+  host: '148.100.143.224',
   username: 'lotspot',
   password: 'lotspot',
   port: 22
