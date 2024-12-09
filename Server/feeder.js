@@ -4,15 +4,15 @@ const SftpClient = require('ssh2-sftp-client');
 
 // Configuration
 const config = {
-  host: '148.100.143.224',
-  username: 'lotspot',
-  password: 'lotspot',
+  host: '', // Change this to your RPIs IP
+  username: 'lotspot', // Change this to your RPIs SSH User
+  password: 'lotspot', // Change this to your RPIs SSH Pass
   port: 22
 };
 
 // Use absolute path for output directory
 const OUTPUT_DIR = path.join(__dirname, 'video_recordings');
-const REMOTE_VIDEO_DIR = '/home/lotspot/Videos';  // Fixed case to match Pi's directory
+const REMOTE_VIDEO_DIR = '/home/lotspot/Videos';  
 const CHECK_INTERVAL = 5000; // 5 seconds
 
 let lastDownloadedFile = '';
