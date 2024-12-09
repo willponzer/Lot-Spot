@@ -1,5 +1,7 @@
+![lotspot](https://github.com/user-attachments/assets/bf579610-1c21-455d-ad6d-7470e241ad79)
 # Lot-Spot
-Fall 2024 Capping Project
+Fall 2024 Capping Project 
+Made By Grant Bever, Mike Pavia, Tom Breaton, Will Ponzer, Sam Steiner
 
 Welcome to LotSpot, thank you for checking out our project.
 
@@ -46,7 +48,7 @@ Please use the instructions on their README to print.
 ASSEMBLY.
 Assembly is very simple once you have all your parts, screw the camera into the bottom hole, connect the cable, then mount the Pi over it, and make sure the cable is correctly installed as that can cause issues. 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 SETTING UP THE CAMERA:
 
@@ -78,7 +80,7 @@ python3 capture_photo.py
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##### How to run the project ########
+##### HOW TO RUN THE PROJECT ########
 
 To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:
 
