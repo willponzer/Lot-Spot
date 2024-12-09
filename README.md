@@ -5,19 +5,26 @@ Welcome to LotSpot, thank you for checking out our project.
 
 If you would like to set up object detection for your parking lot to tell you how many available spots there are, please follow the instructions below. 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 SOFTWARE REQUIREMENTS:
+
 PYTHON VERSION 3.11.1 required or packages cannot be imported and it will not run 
+
 NODE VERSION 22.11.0
-RASPIAN (for camera)
+
+RASPIAN (for camera) - https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit
 
 HARDWARE REQUIREMENTS:
 WIFI CAMERA - This project was made to work with the Raspberry Pi Zero 2 W connected to a PiCam 3 module, however, this will work with any Pi and PiCam as long as they are running the latest version. 
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 HOW TO BUILD THE CAMERA:
+
 As stated above this project uses a PiCam 3 connected to a Pi Zero 2 W with a 3D printed case.
+
 To build, replicate our camera you will need these parts
 
 Raspberry Pi Zero 2 W - https://www.pishop.us/product/raspberry-pi-zero-2-w/ - Any Pi will work but this is a very cheap and quality option and it fits the case
@@ -37,14 +44,16 @@ https://www.printables.com/model/753906-raspberry-pi-zero-2-w-with-camera-module
 Please use the instructions on their README to print.
 
 ASSEMBLY.
-Assembly is very simple once you have all your parts, screw the camera into the bottom hole, connect cable, then mount the Pi over it, make sure the cable is correctly installed as that can cause issues. 
+Assembly is very simple once you have all your parts, screw the camera into the bottom hole, connect the cable, then mount the Pi over it, and make sure the cable is correctly installed as that can cause issues. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 SETTING UP THE CAMERA:
 
 I recommend using the Lite version of Raspberry Pi OS as this project can all be setup using SSH anyway. 
+
 First, after connecting the Pi to WIFI, SSH in.
+
 Once SSH in, you will need to update your PiCam Library using these two commands
 
 sudo apt-get update
@@ -67,9 +76,9 @@ After that run this command to run the script - Be warned that this script will 
 
 python3 capture_photo.py
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##### how to run the project ########
+##### How to run the project ########
 
 To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:
 
@@ -102,15 +111,17 @@ Dependencies all in the lotSpot-env folder should not need to install anything e
 
  https://universe.roboflow.com/ai-training-mevw9/parking-detection-mitok/model/2?image=https%3A%2F%2Fsource.roboflow.com%2FVBemh0IU2sO31snqHxOklbNyr7X2%2FdzANtLFs6vdO1crtc4lQ%2Foriginal.jpg
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 LINKING THE PI TO THE SERVER
 
-In order 
-install ssh2-sftp-client by running npm install ssh2-sftp-client in your server enviornment
-edit the config setting in the feeder.js to match your own SFTP server details
-change the REMOTE_PHOTO_DIR to the directory on your pi where the lot photos are stored
+in your server environment install ssh2-sftp-client by running 
 
+npm install ssh2-sftp-client 
+
+Then go into /lotspot/Server/feeder.js to insert your RPis IP and SSH login info in the areas listed.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 NOTES:
 The camera is more accurate the higher it is, try and get it on a downward angle if possible 
