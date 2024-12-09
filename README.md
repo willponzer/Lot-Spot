@@ -1,4 +1,4 @@
-![lotspot](https://github.com/user-attachments/assets/bf579610-1c21-455d-ad6d-7470e241ad79)
+![lotspot](https://github.com/user-attachments/assets/005124e2-3d31-4c7f-be37-0e19afbd2e7f)
 # Lot-Spot
 Fall 2024 Capping Project 
 Made By Grant Bever, Mike Pavia, Tom Breaton, Will Ponzer, Sam Steiner
