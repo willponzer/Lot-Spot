@@ -107,7 +107,9 @@ Dependencies all in the lotSpot-env folder should not need to install anything e
 LINKING THE PI TO THE SERVER
 
 In order 
-
+install ssh2-sftp-client by running npm install ssh2-sftp-client in your server enviornment
+edit the config setting in the feeder.js to match your own SFTP server details
+change the REMOTE_PHOTO_DIR to the directory on your pi where the lot photos are stored
 
 
 NOTES:
